@@ -10,7 +10,7 @@
   </Overview>
   <Registry>https://registry.hub.docker.com/r/lucassd/unraid/</Registry>
   <GitHub></GitHub>
-  <Repository>lucassd/unraid</Repository>
+  <Repository>lucassd/unraid:proxy</Repository>
   <Support></Support>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
