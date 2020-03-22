@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container version="2">
+  <Date>2020-02-22</Date>
+  <Beta>False</Beta>
+  <Category></Category>
+  <Name>Proxy</Name>
+  <Project></Project>
+  <Overview>
+  Networkproxy on nginx basis
+  </Overview>
+  <Registry>https://registry.hub.docker.com/r/lucassd/unraid/</Registry>
+  <GitHub></GitHub>
+  <Repository>lucassd/unraid</Repository>
+  <Support></Support>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Environment/>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>80</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>443</HostPort>
+        <ContainerPort>443</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <WebUI></WebUI>
+  <Icon></Icon>
+  <Network Default="bridge">br0</Network>
+</Container>
