@@ -30,7 +30,22 @@
       </Port>
     </Publish>
   </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/Proxy</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
   <WebUI></WebUI>
-  <Icon></Icon>
+  <Icon>https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/nginx-icon.png</Icon>
+  
   <Network Default="bridge">br0</Network>
+  
+  <Config Type="Port" Name="HTTP" Target="80" Default="80" Mode="tcp" Display="always-hide" Required="true" Description="HTTP Port">80</Config>
+  
+  <Config Type="Port" Name="HTTPS" Target="443" Default="443" Mode="tcp" Display="always-hide" Required="true" Description="HTTPS Port">443</Config>
+  
+  <Config Type="Path" Name="COnfig Path" Target="/config" Default="/mnt/user/appdata/Proxy" Mode="rw" Display="always-hide" Required="true" Description="This is the path for all web files">/mnt/user/appdata/Proxy</Config>
+  
 </Container>
