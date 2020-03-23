@@ -54,6 +54,6 @@
   
   <Config Type="Path" Name="Config Path" Target="/config" Default="/mnt/user/appdata/Proxy/config" Mode="rw" Display="always-hide" Required="true" Description="This is the path for all web files">/mnt/user/appdata/Proxy/config</Config>
   
-  <Config Type="Path" Name="Certificate Path" Target="/letsencrypt" Default="/mnt/user/appdata/Proxy/letsencrypt" Mode="rw" Display="always-hide" Required="true" Description="This is the path for the certificates">/mnt/user/appdata/Proxy/letsencrypt</Config>
+  <Config Type="Path" Name="Certificate Path" Target="/etc/letsencrypt" Default="/mnt/user/appdata/Proxy/letsencrypt" Mode="rw" Display="always-hide" Required="true" Description="This is the path for the certificates">/mnt/user/appdata/Proxy/letsencrypt</Config>
   
 </Container>
