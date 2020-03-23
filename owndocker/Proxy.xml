@@ -33,8 +33,13 @@
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/user/appdata/Proxy</HostDir>
+      <HostDir>/mnt/user/appdata/Proxy/config</HostDir>
       <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/Proxy/letsencrypt</HostDir>
+      <ContainerDir>/etc/letsencrypt</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
@@ -47,6 +52,8 @@
   
   <Config Type="Port" Name="HTTPS" Target="443" Default="443" Mode="tcp" Display="always-hide" Required="true" Description="HTTPS Port">443</Config>
   
-  <Config Type="Path" Name="COnfig Path" Target="/config" Default="/mnt/user/appdata/Proxy" Mode="rw" Display="always-hide" Required="true" Description="This is the path for all web files">/mnt/user/appdata/Proxy</Config>
+  <Config Type="Path" Name="Config Path" Target="/config" Default="/mnt/user/appdata/Proxy/config" Mode="rw" Display="always-hide" Required="true" Description="This is the path for all web files">/mnt/user/appdata/Proxy/config</Config>
+  
+  <Config Type="Path" Name="Certificate Path" Target="/letsencrypt" Default="/mnt/user/appdata/Proxy/letsencrypt" Mode="rw" Display="always-hide" Required="true" Description="This is the path for the certificates">/mnt/user/appdata/Proxy/letsencrypt</Config>
   
 </Container>
