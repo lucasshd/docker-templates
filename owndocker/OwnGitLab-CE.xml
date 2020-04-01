@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Container version="2">
-    <Beta>False</False>
-    <Category>Backup: Cloud: Network:Web Productivity: Tools:</Category>
-    <Date>2020-03-23</Date>
-    <Name>GitLab-CE</Name>
-    <Description>This is the template for GitLab-CE.[br]
-        [b]This is a custom template made for an own unraid server[b]
-    </Description>
-    <Overview>This is a custom template made for an own unraid server</Overview>
-    <Support></Support>
-    <Registry>https://hub.docker.com/r/gitlab/gitlab-ce/</Registry>
-    <GitHub>https://github.com/gitlabhq/gitlabhq</GitHub>
-    <Repository>gitlab/gitlab-ce</Repository>
-    <ExtraParams>--hostname gitlab.winterkamp.eu </ExtraParams>
-    <BindTime>true</BindTime>
+  <Beta>False</False>
+  <Category></Category>
+  <Date>2020-03-23</Date>
+  <Name>GitLab-CE</Name>
+  <Description>This is the template for GitLab-CE.[br]
+      [b]This is a custom template made for an own unraid server[b]
+  </Description>
+  <Overview>This is a custom template made for an own unraid server</Overview>
+  <Support></Support>
+  <Registry>https://hub.docker.com/r/gitlab/gitlab-ce/</Registry>
+  <GitHub>https://github.com/gitlabhq/gitlabhq</GitHub>
+  <Repository>gitlab/gitlab-ce</Repository>
+  <ExtraParams>--hostname gitlab.winterkamp.eu </ExtraParams>
+  <BindTime>true</BindTime>
   <Privileged>false</Privileged>
     <Networking>
     <Mode>bridge</Mode>
