@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Container version="2">
-  <Beta>False</False>
+  <Beta>False</Beta>
   <Category></Category>
   <Date>2020-03-23</Date>
   <Name>GitLab-CE</Name>
