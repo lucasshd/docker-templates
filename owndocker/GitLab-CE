@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container version="2">
+    <Beta>False</False>
+    <Category>Backup: Cloud: Network:Web Productivity: Tools:</Category>
+    <Date>2020-03-23</Date>
+    <Name>GitLab-CE</Name>
+    <Description>This is the template for GitLab-CE.[br]
+        [b]This is a custom template made for an own unraid server[b]
+    </Description>
+    <Overview>This is a custom template made for an own unraid server</Overview>
+    <Support></Support>
+    <Registry>https://hub.docker.com/r/gitlab/gitlab-ce/</Registry>
+    <GitHub>https://github.com/gitlabhq/gitlabhq</GitHub>
+    <Repository>gitlab/gitlab-ce</Repository>
+    <ExtraParams>--hostname gitlab.winterkamp.eu </ExtraParams>
+    <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+    <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>80</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>443</HostPort>
+        <ContainerPort>443</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>22</HostPort>
+        <ContainerPort>22</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/gitlab-ce/config</HostDir>
+      <ContainerDir>/etc/gitlab</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/gitlab-ce/data</HostDir>
+      <ContainerDir>/var/opt/gitlab</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/gitlab-ce/log</HostDir>
+      <ContainerDir>/var/log/gitlab</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <WebUI>https://gitlab.winterkamp.eu</WebUI>
+  <Banner>https://raw.githubusercontent.com/tynor88/docker-templates/master/images/gitlab.png</Banner>
+  <Icon>https://raw.githubusercontent.com/tynor88/docker-templates/master/images/gitlab_small.png</Icon>
+  <Network Default="br0">bridge</Network>
+  <Config Type="Port" Name="Web Interface Port (HTTP)" Target="80" Default="80" Mode="tcp" Display="always-hide" Required="true" Description="This is GitLab's Web UI port you can access via a web browser.">80</Config>
+  <Config Type="Port" Name="Web Interface Port (HTTPS)" Target="443" Default="443" Mode="tcp" Display="always-hide" Required="true" Description="This is GitLab's Web UI SSL port you can access via a web browser.">443</Config>
+  <Config Type="Port" Name="SSH Port" Target="22" Default="22" Mode="tcp" Display="always-hide" Required="true" Description="This is GitLab's SSH port.">22</Config>
+  <Config Type="Path" Name="Config Storage Path" Target="/etc/gitlab" Default="/mnt/user/appdata/gitlab-ce/config" Mode="rw" Display="advanced-hide" Required="true" Description="This is where GitLab will store its configuration files (use cache drive).">/mnt/user/appdata/gitlab-ce/config</Config>
+  <Config Type="Path" Name="Application Data Storage Path" Target="/var/opt/gitlab" Default="/mnt/user/appdata/gitlab-ce/data" Mode="rw" Display="advanced-hide" Required="true" Description="This is where GitLab will store its application data (use cache drive).">/mnt/user/appdata/gitlab-ce/data</Config>
+  <Config Type="Path" Name="Log Storage Path" Target="/var/log/gitlab" Default="/mnt/user/appdata/gitlab-ce/log" Mode="rw" Display="advanced-hide" Required="true" Description="This is where GitLab will store its logs.">/mnt/user/appdata/gitlab-ce/log</Config>
+</Container>
