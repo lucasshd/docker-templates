@@ -56,7 +56,7 @@
   <WebUI>https://gitlab.winterkamp.eu</WebUI>
   <Banner>https://raw.githubusercontent.com/tynor88/docker-templates/master/images/gitlab.png</Banner>
   <Icon>https://raw.githubusercontent.com/tynor88/docker-templates/master/images/gitlab_small.png</Icon>
-  <Network Default="br0">bridge</Network>
+  <Network Default="bridge">br0</Network>
   <Config Type="Port" Name="Web Interface Port (HTTP)" Target="80" Default="80" Mode="tcp" Display="always-hide" Required="true" Description="This is GitLab's Web UI port you can access via a web browser.">80</Config>
   <Config Type="Port" Name="Web Interface Port (HTTPS)" Target="443" Default="443" Mode="tcp" Display="always-hide" Required="true" Description="This is GitLab's Web UI SSL port you can access via a web browser.">443</Config>
   <Config Type="Port" Name="SSH Port" Target="22" Default="22" Mode="tcp" Display="always-hide" Required="true" Description="This is GitLab's SSH port.">22</Config>
