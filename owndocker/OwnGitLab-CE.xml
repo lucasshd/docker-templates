@@ -10,10 +10,9 @@
   <Overview>This is a custom template made for an own unraid server</Overview>
   <Support></Support>
   <Registry>https://hub.docker.com/r/gitlab/gitlab-ce/</Registry>
-  <GitHub>https://github.com/gitlabhq/gitlabhq</GitHub>
+  <GitHub></GitHub>
   <Repository>gitlab/gitlab-ce</Repository>
-  <ExtraParams>--hostname gitlab.winterkamp.eu </ExtraParams>
-  <BindTime>true</BindTime>
+  <ExtraParams></ExtraParams>
   <Privileged>false</Privileged>
     <Networking>
     <Mode>bridge</Mode>
