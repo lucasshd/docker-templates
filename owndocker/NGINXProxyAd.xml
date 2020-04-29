@@ -13,7 +13,7 @@
   <Registry>https://hub.docker.com/r/jlesage/nginx-proxy-manager/</Registry>
   <GitHub></GitHub>
   <Repository>jlesage/nginx-proxy-manager</Repository>
-  <ExtraParams>--expose=0-1000 -p 8181:8181</ExtraParams>
+  <ExtraParams>-p 80:8080 -p 443:4443 -p 8181:8181 -p 22:22</ExtraParams>
   <Privileged>false</Privileged>
   <Networking>
     <Mode>bridge</Mode>
