@@ -10,9 +10,9 @@
   </Description>
   <Overview>This is a custom template made for an own unraid server</Overview>
   <Support></Support>
-  <Registry>https://hub.docker.com/r/jlesage/nginx-proxy-manager/</Registry>
+  <Registry>https://hub.docker.com/repository/docker/lucassd/proxy</Registry>
   <GitHub></GitHub>
-  <Repository>jlesage/nginx-proxy-manager</Repository>
+  <Repository>lucassd/proxy</Repository>
   <ExtraParams>--expose=0-1000 -p 8181:8181</ExtraParams>
   <Privileged>false</Privileged>
   <Networking>
