@@ -3,7 +3,7 @@
   <Beta>False</Beta>
   <Category></Category>
   <Date>2020-04-29</Date>
-  <Name>Proxy-WebUI</Name>
+  <Name>Proxy-WebUITest</Name>
   <Description>Proxy with UI
   base username: admin@example.com
   base password: changeme
