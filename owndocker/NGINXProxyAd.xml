@@ -13,7 +13,7 @@
   <Registry>https://hub.docker.com/r/jlesage/nginx-proxy-manager/</Registry>
   <GitHub></GitHub>
   <Repository>jlesage/nginx-proxy-manager</Repository>
-  <ExtraParams>-p 80:8080 -p 443:4443 -p 8181:8181 -p 22:22</ExtraParams>
+  <ExtraParams>-p 80:8080 -p 443:4443 -p 81:8181 -p 22:22</ExtraParams>
   <Privileged>false</Privileged>
   <Networking>
     <Mode>bridge</Mode>
@@ -47,7 +47,7 @@
       <Mode/>
     </Variable>
   </Environment>
-  <WebUI>http://[IP]:[PORT:8181]</WebUI>
+  <WebUI>http://[IP]:[PORT:81]</WebUI>
   <Banner>https://raw.githubusercontent.com/jlesage/docker-templates/master/jlesage/images/nginx-proxy-manager.png</Banner>
   <Icon>https://raw.githubusercontent.com/jlesage/docker-templates/master/jlesage/images/nginx-proxy-manager-icon.png</Icon>
   <Network Default="bridge">br0</Network>
