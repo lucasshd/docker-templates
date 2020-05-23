@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container version="2">
+  <Date>2020-05-23</Date>
+  <Name>RTMP-Server</Name>
+  <Overview>
+    RTMP-Server
+  </Overview>
+  <Description>
+    RTMP-Server
+  </Description>
+  <Registry>https://hub.docker.com/r/alqutami/rtmp-hls</Registry>
+  <GitHub>https://github.com/TareqAlqutami/rtmp-hls-server</GitHub>
+  <Repository>alqutami/rtmp-hls</Repository>
+  <Support></Support>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Environment/>
+  <Networking>
+    <Mode>bridge</Mode>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/rtmp-server/nginx.conf</HostDir>
+      <ContainerDir>/etc/nginx/nginx.conf</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:80]/</WebUI>
+   <Config Type="Path" Name="Config Path" Target="/etc/nginx/nginx.conf" Default="/mnt/user/appdata/rtmp-server/nginx.conf" Mode="rw" Display="always-hide" Required="true" Description="">/mnt/user/appdata/rtmp-server/nginx.conf</Config>
+  <Icon></Icon>
+</Container>
