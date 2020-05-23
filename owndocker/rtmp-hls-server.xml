@@ -14,6 +14,7 @@
   <Support></Support>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
+  <ExtraParams>-p 1935:1935 -p 80:8080</ExtraParams>
   <Environment/>
   <Networking>
     <Mode>bridge</Mode>
