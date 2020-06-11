@@ -9,7 +9,7 @@
   </Overview>
   <Registry>https://gitlab.winterkamp.eu/Luca/nginx-fileserver/container_registry</Registry>
   <GitHub>https://gitlab.winterkamp.eu/Luca/nginx-fileserver</GitHub>
-  <Repository>registry.winteramp.eu:443/luca/nginx-fileserver</Repository>
+  <Repository>registry.winterkamp.eu:443/luca/nginx-fileserver</Repository>
   <Support></Support>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
