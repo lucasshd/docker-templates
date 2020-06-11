@@ -1,18 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Container version="2">
   <Date>2020-06-11</Date>
-  <Name>NGINX Fileserver</Name>
-  <Overview/>
-  <Description/>
+  <Beta>False</Beta>
+  <Category></Category>
+  <Name>NGINX-FileServer</Name>
+  <Project></Project>
+  <Overview>
+  </Overview>
   <Registry>https://gitlab.winterkamp.eu/Luca/nginx-fileserver/container_registry</Registry>
   <GitHub>https://gitlab.winterkamp.eu/Luca/nginx-fileserver</GitHub>
-  <Repository>registry.winterkamp.eu:443/luca/nginx-fileserver</Repository>
+  <Repository>registry.winteramp.eu:443/luca/nginx-fileserver</Repository>
   <Support></Support>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
+  <ExtraParams></ExtraParams>
   <Environment/>
   <Networking>
-    <Mode>br0</Mode>
+    <Mode>bridge</Mode>
     <Publish>
       <Port>
         <HostPort>80</HostPort>
@@ -38,17 +42,17 @@
       <Mode>rw</Mode>
     </Volume>
   </Data>
-  <WebUI>http://[IP]:[PORT:80]/</WebUI>
+  <WebUI></WebUI>
   <Icon>https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/nginx-icon.png</Icon>
   
-  <Network Default="bridge" Display="always-hide">br0</Network>
+  <Network Default="bridge">br0</Network>
   
   <Config Type="Port" Name="HTTP" Target="80" Default="80" Mode="tcp" Display="always-hide" Required="true" Description="HTTP Port">80</Config>
   
   <Config Type="Port" Name="HTTPS" Target="443" Default="443" Mode="tcp" Display="always-hide" Required="true" Description="HTTPS Port">443</Config>
   
-  <Config Type="Path" Name="Config Path" Target="/config" Default="/mnt/user/appdata/nginx-fileserver/config" Mode="rw" Display="always-hide" Required="true" Description="This is the path for all configs">/mnt/user/appdata/nginx-fileserver/config</Config>
+  <Config Type="Path" Name="Config Path" Target="/config" Default="/mnt/user/appdata/nginx-fileserver/config" Mode="rw" Display="always-hide" Required="true" Description="This is the path for all config files">/mnt/user/appdata/nginx-fileserver/config</Config>
   
-  <Config Type="Path" Name="Certificate Path" Target="/data" Default="/mnt/user/appdata/nginx-fileserver/data" Mode="rw" Display="always-hide" Required="true" Description="This is the path for all assets">/mnt/user/appdata/nginx-fileserver/data</Config>
+  <Config Type="Path" Name="Data Path" Target="/data" Default="/mnt/user/appdata/nginx-fileserver/data" Mode="rw" Display="always-hide" Required="true" Description="This is the path for all the data">/mnt/user/appdata/nginx-fileserver/data</Config>
   
 </Container>
