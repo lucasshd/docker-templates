@@ -53,5 +53,3 @@
   <Config Type="Path" Name="Certificate Path" Target="/data" Default="/mnt/user/appdata/nginx-fileserver/data" Mode="rw" Display="always-hide" Required="true" Description="This is the path for the certificates">/mnt/user/appdata/nginx-fileserver/data</Config>
   
 </Container>
-
-</Container>
