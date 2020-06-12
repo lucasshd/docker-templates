@@ -27,6 +27,7 @@
     </Volume>
   </Data>
   <WebUI>http://[IP]:[PORT:80]/</WebUI>
-   <Config Type="Path" Name="Config Path" Target="/etc/nginx/nginx.conf" Default="/mnt/user/appdata/rtmp-server/nginx.conf" Mode="rw" Display="always-hide" Required="true" Description="">/mnt/user/appdata/rtmp-server/nginx.conf</Config>
+  <Network Default="bridge">br0</Network>
+  <Config Type="Path" Name="Config Path" Target="/etc/nginx/nginx.conf" Default="/mnt/user/appdata/rtmp-server/nginx.conf" Mode="rw" Display="always-hide" Required="true" Description="">/mnt/user/appdata/rtmp-server/nginx.conf</Config>
   <Icon></Icon>
 </Container>
