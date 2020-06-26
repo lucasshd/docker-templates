@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container version="2">
+  <Date>2020-06-26</Date>
+  <Name>Gitlab-Runner</Name>
+  <Overview>
+    Gitlab-Runner
+  </Overview>
+  <Description>
+    Gitlab-Runner
+  </Description>
+  <Registry>https://hub.docker.com/r/gitlab/gitlab-runner</Registry>
+  <GitHub></GitHub>
+  <Repository>gitlab/gitlab-runner</Repository>
+  <Support></Support>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <ExtraParams>--restart always</ExtraParams>
+  <Environment/>
+  <Networking>
+    <Mode>bridge</Mode>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/gitlab-runner/config</HostDir>
+      <ContainerDir>/etc/gitlab-runner</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/var/run/docker.sock</HostDir>
+      <ContainerDir>/var/run/docker.sock</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI></WebUI>
+  <Network Default="bridge">br0</Network>
+  <Config Type="Path" Name="Config Path" Target="/etc/gitlab-runner" Default="/mnt/user/appdata/gitlab-runner/config" Mode="rw" Display="always-hide" Required="true" Description="Config File">/mnt/user/appdata/gitlab-runner/config</Config>
+  <Config Type="Path" Name="Config Path" Target="/var/run/docker.sock" Default="/var/run/docker.sock" Mode="rw" Display="always-hide" Required="true" Description="Data Path">/var/run/docker.sock</Config>
+  <Icon></Icon>
+</Container>
