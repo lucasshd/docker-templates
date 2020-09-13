@@ -4,11 +4,10 @@
   <Category></Category>
   <Date>2020-09-13</Date>
   <Name>Minecraft</Name>
-  <Description>This is a template for a single Minecraft deploy
-  </Description>
+  <Description>This is a template for a single Minecraft deploy</Description>
   <Overview>This is a custom template made for an own unraid server</Overview>
   <Support></Support>
-  <Registry>https://gitlab.winterkamp.eu/Luca/papermc-docker</Registry>
+  <Registry>https://gitlab.winterkamp.eu/Luca/papermc-docker/container_registry</Registry>
   <GitHub>https://gitlab.winterkamp.eu/Luca/papermc-docker</GitHub>
   <Repository>registry.winterkamp.eu/luca/papermc-docker/felixklauke</Repository>
   <ExtraParams>-p 25565:25565</ExtraParams>
