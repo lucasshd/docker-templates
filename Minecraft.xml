@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container version="2">
+  <Beta>False</Beta>
+  <Category></Category>
+  <Date>2020-09-13</Date>
+  <Name>Minecraft</Name>
+  <Description>This is a template for a single Minecraft deploy</Description>
+  <Overview>This is a custom template made for an own unraid server</Overview>
+  <Support></Support>
+  <Registry>https://gitlab.winterkamp.eu/Luca/papermc-docker/container_registry</Registry>
+  <GitHub>https://gitlab.winterkamp.eu/Luca/papermc-docker</GitHub>
+  <Repository>registry.winterkamp.eu/luca/papermc-docker/felixklauke</Repository>
+  <ExtraParams>-p 25565:25565</ExtraParams>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/minecraft/config</HostDir>
+      <ContainerDir>/opt/minecraft/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/minecraft/worlds</HostDir>
+      <ContainerDir>/opt/minecraft/worlds</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/minecraft/plugins</HostDir>
+      <ContainerDir>/opt/minecraft/plugins</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/minecraft/data</HostDir>
+      <ContainerDir>/opt/minecraft/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/minecraft/logs</HostDir>
+      <ContainerDir>/opt/minecraft/logs</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <WebUI></WebUI>
+  <Banner></Banner>
+  <Icon></Icon>
+  <Network Default="bridge">br0</Network>
+  <Config Type="Path" Name="Config storage path" Target="/opt/minecraft/config" Default="/mnt/user/appdata/minecraft/config" Mode="rw" Display="always-hide" Required="true" Description="This is where Minecraft will store its configuration files.">/mnt/user/appdata/minecraft/config</Config>
+  <Config Type="Path" Name="World storage path" Target="/opt/minecraft/worlds" Default="/mnt/user/appdata/minecraft/worlds" Mode="rw" Display="always-hide" Required="true" Description="This is where Minecraft will store the world.">/mnt/user/appdata/minecraft/worlds</Config>
+  <Config Type="Path" Name="Plugin storage path" Target="/opt/minecraft/plugins" Default="/mnt/user/appdata/minecraft/plugins" Mode="rw" Display="always-hide" Required="true" Description="This is where Minecraft will store all plugins.">/mnt/user/appdata/minecraft/plugins</Config>
+  <Config Type="Path" Name="Data storage path" Target="/opt/minecraft/data" Default="/mnt/user/appdata/minecraft/data" Mode="rw" Display="always-hide" Required="true" Description="This is where Minecraft will store its data.">/mnt/user/appdata/minecraft/data</Config>
+  <Config Type="Path" Name="Log Storage Path" Target="/opt/minecraft/logs" Default="/mnt/user/appdata/minecraft/logs" Mode="rw" Display="always-hide" Required="true" Description="This is where Minecraft will store its logs.">/mnt/user/appdata/minecraft/logs</Config>
+</Container>
