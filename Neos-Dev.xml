@@ -10,7 +10,7 @@
   <Support></Support>
   <Registry>https://gitlab.winterkamp.eu/Luca/neos-docker-development-environment/</Registry>
   <GitHub>https://gitlab.winterkamp.eu/Luca/neos-docker-development-environment</GitHub>
-  <Repository>neos-docker-development-environment</Repository>
+  <Repository>registry.winterkamp.eu/luca/neos-docker-development-environment</Repository>
   <ExtraParams>-p 80:8081</ExtraParams>
   <Privileged>false</Privileged>
   <Networking>
@@ -24,7 +24,7 @@
     </Volume>
   </Data>
   <Environment/>
-  <WebUI>[IP][PORT]</WebUI>
+  <WebUI>[IP]:[PORT]</WebUI>
   <Banner></Banner>
   <Icon></Icon>
   <Network Default="bridge">br0</Network>
