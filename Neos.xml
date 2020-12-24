@@ -26,7 +26,7 @@
   <Environment/>
   <WebUI>http://[IP]:[PORT:80]/</WebUI>
   <Banner></Banner>
-  <Icon>https://www.google.de/imgres?imgurl=https%3A%2F%2Favatars3.githubusercontent.com%2Fu%2F11575267%3Fs%3D200%26v%3D4&imgrefurl=https%3A%2F%2Fgithub.com%2Fneos&tbnid=0rrCgeYHY6uUlM&vet=12ahUKEwix8cb5wOXtAhVfgaQKHYzJDSgQMygLegUIARCWAQ..i&docid=lJsNBvAEC8pjUM&w=200&h=200&q=neos.io&ved=2ahUKEwix8cb5wOXtAhVfgaQKHYzJDSgQMygLegUIARCWAQ</Icon>
+  <Icon></Icon>
   <Network Default="bridge">br0</Network>
   <Config Type="Path" Name="Storage Path" Target="/app" Default="/mnt/user/appdata/Neos" Mode="rw" Display="always-hide" Required="true" Description="This is the storagepath for Neos">/mnt/user/appdata/Neos</Config>
 </Container>
