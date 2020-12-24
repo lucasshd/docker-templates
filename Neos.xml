@@ -3,7 +3,7 @@
   <Beta>False</Beta>
   <Category></Category>
   <Date>2020-12-18</Date>
-  <Name>Neos-Dev</Name>
+  <Name>Neos</Name>
   <Description>This is a Docker Container for Neos
   </Description>
   <Overview>This is a custom template made for an own unraid server</Overview>
