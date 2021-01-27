@@ -1,0 +1,30 @@
+  
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>docker-registry-browser</Name>
+  <Repository>klausmeyer/docker-registry-browser</Repository>
+  <Registry>https://hub.docker.com/r/klausmeyer/docker-registry-browser</Registry>
+  <Network Default="bridge">bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://hub.docker.com/r/klausmeyer/docker-registry-browser</Support>
+  <Project/>
+  <Overview>Webapplication to Brwose the content of an docker registry</Overview>
+  <Category/>
+  <WebUI/>
+  <TemplateURL/>
+  <Banner></Banner>
+  <Icon></Icon>
+  <ExtraParams>-p 80:8080</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled/>
+  <DonateText/>
+  <DonateLink/>
+  <Description></Description>
+  <Environment/>
+  <Labels/>
+  <WebUI>http://[IP]:[PORT:80]</WebUI>
+  <Config Name="DOCKER_REGISTRY_URL" Target="DOCKER_REGISTRY_URL" Default="https://example.com" Description="URL from docker registry" Type="Variable" Display="always" Required="true" Mask="true"/>
+</Container>
