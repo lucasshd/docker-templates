@@ -3,7 +3,7 @@
     <Name>docker-registry-browser</Name>
     <Repository>klausmeyer/docker-registry-browser</Repository>
     <Registry>https://hub.docker.com/r/klausmeyer/docker-registry-browser</Registry>
-    <Network Default="bridge">bridge</Network>
+    <Network>bridge</Network>
     <MyIP/>
     <Shell>sh</Shell>
     <Privileged>false</Privileged>
@@ -11,7 +11,7 @@
     <Project/>
     <Overview>Webapplication to Brwose the content of an docker registry</Overview>
     <Category/>
-    <WebUI/>
+    <WebUI>http://[IP]:[PORT:80]</WebUI>
     <TemplateURL/>
     <Banner></Banner>
     <Icon></Icon>
@@ -24,7 +24,6 @@
     <Description></Description>
     <Environment/>
     <Labels/>
-    <WebUI>http://[IP]:[PORT:80]</WebUI>
     <Config Name="DOCKER_REGISTRY_URL" Target="DOCKER_REGISTRY_URL" Default="https://example.com" Description="URL from docker registry" Type="Variable" Display="always" Required="true" Mask="false"/>
     <Config Name="HTTP_Port" Target="PORT" Default="80" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="true" Mask="false"/>
     <Config Name="HTTPS_Port" Target="SSL_PORT" Default="443" Mode="tcp" Description="Container Port: 443" Type="Port" Display="always" Required="true" Mask="false"/>
