@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<Container version="2">
+    <Name>phpldapadmin</Name>
+    <Repository>osixia/phpldapadmin:0.9.0</Repository>
+    <Registry>https://hub.docker.com/r/osixia/phpldapadmin/</Registry>
+    <Network>bridge</Network>
+    <Privileged>false</Privileged>
+    <Support>https://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository</Support>
+    <Project>https://github.com/osixia/docker-phpLDAPadmin</Project>
+    <Overview>A docker image to run phpldapadmin. It provides a user interface to an openldap database. It must be on the same custom network as openldap and must be linked via --link openldap:PHPLDAPADMIN_LDAP_HOSTS e.g. --link openldap:example.org&#xD;
+An example config.php can be found here: https://github.com/commandprompt/phpldapadmin/blob/master/config/config.php.example</Overview>
+    <Category>Network:Other Tools:</Category>
+    <WebUI>https://[IP]:[PORT:443]/</WebUI>
+    <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/phpldapadmin.xml</TemplateURL>
+    <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/phpldapadmin.png</Icon>
+    <ExtraParams>-p 443:443 -p 80:80</ExtraParams>
+    <PostArgs>--loglevel debug</PostArgs>
+    <Config Name="PHPLDAPADMIN_LDAP_HOSTS" Target="PHPLDAPADMIN_LDAP_HOSTS" Default="example.org" Description="Set in the phpldapadmin server config.php" Type="Variable" Display="always" Required="true" Mask="false"/>
+    <Config Name="Appdata" Target="/container/service/phpldapadmin/assets/config/" Default="/mnt/user/appdata/phpldapadmin" Mode="rw" Description="Place your config.php in this path after setting up basic stuff in it like a hostname value" Type="Path" Display="advanced" Required="true" Mask="false"/>
+</Container>
