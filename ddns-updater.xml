@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container version="2">
+  <Date>2021-06-27</Date>
+  <Beta>False</Beta>
+  <Category></Category>
+  <Name>DDNS-Updater</Name>
+  <Project></Project>
+  <Overview>
+  Updates DDNS
+  </Overview>
+  <Registry>https://hub.docker.com/r/qmcgaw/ddns-update/</Registry>
+  <GitHub></GitHub>
+  <Repository>qmcgaw/ddns-updater</Repository>
+  <Support></Support>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <ExtraParams>-ti</ExtraParams>
+  <Environment/>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>80</HostPort>
+        <ContainerPort>8000</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/DDNS-Updater/</HostDir>
+      <ContainerDir>/updater/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:8000]/</WebUI>
+  <Icon></Icon>
+  
+  <Network Default="bridge">br0</Network>
+  
+  <Config Type="Port" Name="HTTP" Target="8000" Default="8000" Mode="tcp" Display="always-hide" Required="true" Description="HTTP Port">8000</Config>
+  
+  <Config Type="Path" Name="Data Path" Target="/updater/data" Default="/mnt/user/appdata/DDNS-Updater" Mode="rw" Display="always-hide" Required="true" Description="This is the path for all files">/mnt/user/appdata/DDNS-Updater</Config>
+
+</Container>
