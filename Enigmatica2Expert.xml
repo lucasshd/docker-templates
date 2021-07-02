@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container version="2">
+  <Date>2021-07-02</Date>
+  <Beta>False</Beta>
+  <Category></Category>
+  <Name>Enigmatica2Expert</Name>
+  <Project></Project>
+  <Overview>
+  Networkproxy on nginx basis
+  </Overview>
+  <Registry>https://gitlab.winterkamp.eu/Luca/enigmatica2expert-docker/container_registry</Registry>
+  <GitHub></GitHub>
+  <Repository>registry.winterkamp.eu/luca/enigmatica2expert-docker</Repository>
+  <Support></Support>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <ExtraParams>-ti</ExtraParams>
+  <Environment/>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>25565</HostPort>
+        <ContainerPort>25565</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/Enigmatica2Expert</HostDir>
+      <ContainerDir>/usr/local/Enigmatica2Expert/enigmatica2</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    </Volume>
+  </Data>
+  <WebUI></WebUI>
+  <Icon>https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/nginx-icon.png</Icon>
+  
+  <Network Default="bridge">br0</Network>
+  
+  <Config Type="Port" Name="Client" Target="25565" Default="25565" Mode="udp" Display="always-hide" Required="true" Description="Client Port">25565</Config>
+
+  <Config Type="Path" Name="Data Path" Target="/usr/local/Enigmatica2Expert/enigmatica2" Default="/mnt/user/appdata/Enigmatica2Expert" Mode="rw" Display="always-hide" Required="true" Description="This is the path for all files">/mnt/user/appdata/Enigmatica2Expert</Config>
+</Container>
