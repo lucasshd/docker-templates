@@ -32,7 +32,6 @@
       <ContainerDir>/usr/local/Enigmatica2Expert/enigmatica2</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
-    </Volume>
   </Data>
   <WebUI></WebUI>
   <Icon>https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/nginx-icon.png</Icon>
