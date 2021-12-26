@@ -3,14 +3,14 @@
   <Date>2021-12-26</Date>
   <Name>Nginx-AutoDeploy</Name>
   <Overview>
-    Nginx-AutoDeploy
+    A container based on nginx baseimage from Luca Winterkamp combined with a gitlab-runner to automaticly deploy new websites
   </Overview>
   <Description>
     A container based on nginx baseimage from Luca Winterkamp combined with a gitlab-runner to automaticly deploy new websites
   </Description>
   <Registry>registry.winterkamp.eu/luca/nginx-gitlabautodeploy</Registry>
   <GitHub>https://gitlab.winterkamp.eu/Luca/nginx-gitlabautodeploy</GitHub>
-  <Repository>gitlab/gitlab-runner</Repository>
+  <Repository>Luca/nginx-gitlabautodeploy</Repository>
   <Support></Support>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
@@ -49,7 +49,7 @@
       <Mode>rw</Mode>
     </Volume>
   </Data>
-  <WebUI></WebUI>
+  <WebUI>http://[IP]:[PORT:80]/</WebUI>
   <Network Default="bridge">br0</Network>
   
   <Config Type="Port" Name="HTTP" Target="80" Default="80" Mode="tcp" Display="always-hide" Required="true" Description="HTTP Port">80</Config>
