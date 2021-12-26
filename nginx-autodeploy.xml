@@ -10,7 +10,7 @@
   </Description>
   <Registry>registry.winterkamp.eu/luca/nginx-gitlabautodeploy</Registry>
   <GitHub>https://gitlab.winterkamp.eu/Luca/nginx-gitlabautodeploy</GitHub>
-  <Repository>luca/nginx-gitlabautodeploy</Repository>
+  <Repository>registry.winterkamp.eu/luca/nginx-gitlabautodeploy</Repository>
   <Support></Support>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
