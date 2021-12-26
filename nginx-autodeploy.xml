@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container version="2">
+  <Date>2021-12-26</Date>
+  <Name>Nginx-AutoDeploy</Name>
+  <Overview>
+    Nginx-AutoDeploy
+  </Overview>
+  <Description>
+    A container based on nginx baseimage from Luca Winterkamp combined with a gitlab-runner to automaticly deploy new websites
+  </Description>
+  <Registry>registry.winterkamp.eu/luca/nginx-gitlabautodeploy</Registry>
+  <GitHub>https://gitlab.winterkamp.eu/Luca/nginx-gitlabautodeploy</GitHub>
+  <Repository>gitlab/gitlab-runner</Repository>
+  <Support></Support>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <ExtraParams></ExtraParams>
+  <Environment>
+  </Environment>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>80</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>443</HostPort>
+        <ContainerPort>443</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/nginx-autodeploy/app</HostDir>
+      <ContainerDir>/volume/app</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/nginx-autodeploy/nginx</HostDir>
+      <ContainerDir>/volume/nginx</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/nginx-autodeploy/runner</HostDir>
+      <ContainerDir>/volume/runner</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI></WebUI>
+  <Network Default="bridge">br0</Network>
+  
+  <Config Type="Port" Name="HTTP" Target="80" Default="80" Mode="tcp" Display="always-hide" Required="true" Description="HTTP Port">80</Config>
+  <Config Type="Port" Name="HTTPS" Target="443" Default="443" Mode="tcp" Display="always-hide" Required="true" Description="HTTPS Port">443</Config>
+
+  <Config Name="gitlab_url" Target="gitlab_url" Default="https://gitlab.winterkamp.eu" Description="URL from gitlab server (Only for initial setup)" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="tag_list" Target="tag_list" Default="" Description="Tags runner has to have (Only for initial setup)" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="runner_name" Target="runner_name" Default="deployrunner01" Description="Name of the runner (Only for initial setup)" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="register_token" Target="register_token" Default="" Description="Registrationtoken from gitlab to register runner (Only for initial setup)" Type="Variable" Display="always" Required="true" Mask="false"/>
+
+  <Config Type="Path" Name="WebApp Path" Target="/volume/app" Default="/mnt/user/appdata/nginx-autodeploy/app" Mode="rw" Display="always-hide" Required="true" Description="The webapp is stored here">/mnt/user/appdata/nginx-autodeploy/app</Config>
+  <Config Type="Path" Name="Nginx config Path" Target="/volume/nginx" Default="/mnt/user/appdata/nginx-autodeploy/nginx" Mode="rw" Display="always-hide" Required="true" Description="The nginx config is stored here">/mnt/user/appdata/nginx-autodeploy/nginx</Config>
+  <Config Type="Path" Name="Runner Path" Target="/volume/runner" Default="/mnt/user/appdata/nginx-autodeploy/runner" Mode="rw" Display="always-hide" Required="true" Description="The gitlab-runner config and the cloned repos are stored here">/mnt/user/appdata/nginx-autodeploy/runner</Config>
+</Container>
