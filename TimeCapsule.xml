@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container version="2">
+  <Date>2022-01-25</Date>
+  <Name>TimeCapsule</Name>
+  <Overview>
+  </Overview>
+  <Description>
+  </Description>
+  <Registry>https://hub.docker.com/r/pdouble16/timecapsule</Registry>
+  <GitHub>https://github.com/double16/timecapsule</GitHub>
+  <Repository>pdouble16/timecapsule</Repository>
+  <Support></Support>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <ExtraParams></ExtraParams>
+  <Environment>
+  </Environment>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>548</HostPort>
+        <ContainerPort>548</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/timecapsule/backup</HostDir>
+      <ContainerDir>/backup</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:80]/</WebUI>
+  <Network Default="bridge">br0</Network>
+  
+  <Config Type="Port" Name="HTTP" Target="548" Default="548" Mode="tcp" Display="always-hide" Required="true" Description="HTTP Port">548</Config>
+
+  <Config Name="VOLSIZELIMIT" Target="VOLSIZELIMIT" Default="1000000" Description="Volume size limit variable in KB units" Type="Variable" Display="always" Required="true" Mask="false"/>
+
+  <Config Type="Path" Name="Backup Path" Target="/backup" Default="/mnt/user/appdata/timecapsule/backup" Mode="rw" Display="always-hide" Required="true" Description="The backups from the devices are stored here">/mnt/user/appdata/timecapsule/backup</Config>
+</Container>
