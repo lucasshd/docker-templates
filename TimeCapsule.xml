@@ -38,6 +38,8 @@
   <Config Type="Port" Name="HTTP" Target="548" Default="548" Mode="tcp" Display="always-hide" Required="true" Description="HTTP Port">548</Config>
 
   <Config Name="VOLSIZELIMIT" Target="VOLSIZELIMIT" Default="1000000" Description="Volume size limit variable in KB units" Type="Variable" Display="always" Required="true" Mask="false"/>
-
+  <Config Name="PGID" Target="PGID" Default="100" Description="" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="PUID" Target="PUID" Default="99" Description="" Type="Variable" Display="always" Required="true" Mask="false"/>
+  
   <Config Type="Path" Name="Backup Path" Target="/backup" Default="/mnt/user/appdata/timecapsule/backup" Mode="rw" Display="always-hide" Required="true" Description="The backups from the devices are stored here">/mnt/user/appdata/timecapsule/backup</Config>
 </Container>
